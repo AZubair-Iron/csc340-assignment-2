@@ -19,7 +19,7 @@ public class RestAPIController{
     @GetMapping("/games")
     public Object getGamesDeals() {
         try {
-            String url = "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=3";
+            String url = "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=15";
             RestTemplate restTemplate = new RestTemplate();
             ObjectMapper mapper = new ObjectMapper();
 
@@ -45,6 +45,7 @@ public class RestAPIController{
                     null, ex);
             return "error in /games";
         }
+
     }
 
 }
